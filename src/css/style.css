@@ -1,0 +1,106 @@
+:root {
+    --bg-color: #181b22;
+    --code-bg-color: #22242e;
+    --fg-color: #c3c7d1;
+    --fg-color: white;
+}
+
+.bold {
+    font-weight: 900;
+}
+.italic {
+    font-style: italic;
+}
+.small {
+    font-size: 1.25rem;
+}
+.medium {
+    font-size: 1.75rem;
+}
+.big {
+    font-size: 2.1875rem;
+}
+.bigger {
+    font-size: 3.125rem;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: "Fira Code", monospace;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+body {
+    margin: 0;
+    padding: 0 10px;
+
+    color: var(--fg-color);
+}
+
+code {
+    background-color: var(--code-bg-color);
+    display: inline-block;
+
+    border-radius: 9px;
+    padding: 0.3rem 1rem;
+}
+
+code,
+code * {
+    vertical-align: middle;
+}
+
+#hero {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: visible;
+
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+#hello-friend {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.typewriter-cursor {
+    opacity: 0;
+    animation: blink 800ms step-start 0s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-cursor {
+        opacity: 1;
+        animation: none;
+    }
+}
