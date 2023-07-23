@@ -1,4 +1,8 @@
+@import "../node_modules/@flaticon/flaticon-uicons/css/all/all.css";
+
 :root {
+    --pi: 3.14159265358979;
+
     --bg-color: #181b22;
     --code-bg-color: #22242e;
     --fg-color: #c3c7d1;
@@ -74,6 +78,29 @@ code * {
     /* flex-flow: column; */
     align-items: center;
     justify-content: center;
+}
+
+#contact-cta {
+    --radius: 16vw;
+
+    position: absolute;
+    background: var(--code-bg-color);
+
+    top: calc(-1 * var(--radius));
+    left: calc(-1 * var(--radius));
+
+    width: calc(2 * var(--radius));
+    height: calc(2 * var(--radius));
+
+    border-radius: 100%;
+}
+
+#contact-cta i {
+    position: relative;
+    font-size: calc(var(--radius) / 4);
+
+    top: calc(4 / var(--pi) * var(--radius));
+    left: calc(4 / var(--pi) * var(--radius));
 }
 
 #hello-friend {
