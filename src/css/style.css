@@ -45,12 +45,18 @@ body {
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
     background-color: var(--bg-color);
+
+    scroll-behavior: smooth;
+    /* outline: aqua solid 1px; */
 }
 
 body {
+    position: relative;
+
     margin: 0;
-    padding: 0 10px;
+    padding: 0;
 
     color: var(--fg-color);
 }
@@ -68,16 +74,36 @@ code * {
     vertical-align: middle;
 }
 
-#hero {
+#hello-friend-container {
+    position: absolute;
+
     height: 100%;
+    width: 100%;
+
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
 
     display: flex;
-    /* flex-flow: column; */
     align-items: center;
     justify-content: center;
+}
+
+.bubble-button {
+    --hover-opacity: 70%;
+}
+
+.bubble-button:active i {
+    opacity: var(--hover-opacity);
+}
+
+@media (hover: hover) {
+    .bubble-button:hover {
+        cursor: pointer;
+    }
+    .bubble-button:hover i,
+    .bubble-button:focus i {
+        opacity: var(--hover-opacity);
+    }
 }
 
 #contact-cta {
@@ -93,14 +119,72 @@ code * {
     height: calc(2 * var(--radius));
 
     border-radius: 100%;
+
+    animation: circle-popup 800ms both 1400ms;
 }
 
 #contact-cta i {
-    position: relative;
+    display: inline-flex;
+
+    position: absolute;
     font-size: calc(var(--radius) / 4);
 
     top: calc(4 / var(--pi) * var(--radius));
     left: calc(4 / var(--pi) * var(--radius));
+}
+
+@keyframes circle-popup {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 100%;
+    }
+}
+
+#scroll-down-cta {
+    --radius: 20vw;
+
+    position: absolute;
+    background: var(--code-bg-color);
+
+    bottom: calc(-1 * var(--radius));
+    right: calc(-1 * var(--radius));
+
+    width: calc(2 * var(--radius));
+    height: calc(2 * var(--radius));
+
+    border-radius: 100%;
+
+    animation: circle-popup 800ms both 2100ms, spin 800ms both 2900ms;
+}
+
+#scroll-down-cta:active {
+    animation: circle-popup 800ms both 2100ms, spin 800ms both 2900ms;
+}
+
+#scroll-down-cta i {
+    display: inline-flex;
+
+    position: absolute;
+    font-size: calc(var(--radius) / 2);
+
+    overflow: hidden;
+
+    transform: translate(62.7323%, 62.7323%) rotate(135deg);
+}
+
+.spin {
+    animation: spin 800ms both !important;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: -360deg;
+    }
 }
 
 #hello-friend {
