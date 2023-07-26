@@ -21,3 +21,13 @@ const typewriter = new Typewriter("#hello-friend-text", {
     delay: 80,
     pauseFor: 750,
 });
+
+// Animate the scroll down arrow when pressed
+function scrollDown() {
+    document.querySelector("#scroll-down-cta").classList.add("spin-slide-out");
+}
+
+// On page reload, scroll back to the top
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+};
