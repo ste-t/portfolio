@@ -61,6 +61,15 @@ body {
     color: var(--fg-color);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 code {
     background-color: var(--code-bg-color);
     display: inline-block;
@@ -131,15 +140,8 @@ code * {
 
     top: calc(4 / var(--pi) * var(--radius));
     left: calc(4 / var(--pi) * var(--radius));
-}
 
-@keyframes circle-popup {
-    from {
-        scale: 0;
-    }
-    to {
-        scale: 100%;
-    }
+    animation: ring 1200ms infinite ease-in-out 2200ms;
 }
 
 #scroll-down-cta {
@@ -174,16 +176,45 @@ code * {
     transform: translate(62.7323%, 62.7323%) rotate(135deg);
 }
 
-.spin {
-    animation: spin 800ms both !important;
+@keyframes circle-popup {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 100%;
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    50% {
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+    100% {
+        transform: rotate(0) scale(1) skew(1deg);
+    }
 }
 
 @keyframes spin {
     from {
-        rotate: 0deg;
+        rotate: 360deg;
     }
     to {
-        rotate: -360deg;
+        rotate: 0deg;
     }
 }
 
