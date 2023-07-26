@@ -97,6 +97,7 @@ section {
 
 .bubble-button {
     --hover-opacity: 70%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bubble-button:active i {
