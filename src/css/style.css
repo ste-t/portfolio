@@ -180,6 +180,11 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(4, 200px);
+    grid-template-areas:
+        "pfp bio bio bio"
+        "c bio bio bio"
+        "c d e e"
+        "c d f f";
 
     gap: 15px;
 }
@@ -203,27 +208,28 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 5%;
+    font-weight: bold;
 }
 
+.item-1 {
+    grid-area: pfp;
+}
 .item-2 {
-    grid-row: span 2;
-    grid-column: span 3;
+    grid-area: bio;
 }
-
 .item-3 {
-    grid-row: span 3;
+    grid-area: c;
 }
-
 .item-4 {
-    grid-row: span 2;
+    grid-area: d;
 }
-
 .item-5 {
-    grid-column: span 2;
+    grid-column: e;
 }
-
 .item-6 {
-    grid-column: span 2;
+    grid-column: f;
 }
 
 #test {
