@@ -175,6 +175,52 @@ section {
     transform: translate(62.7323%, 62.7323%) rotate(135deg);
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+
+    gap: 15px;
+}
+
+.item {
+    background: var(--code-bg-color);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pfp {
+    width: 70%;
+}
+
+.item-2 {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+.item-3 {
+    grid-row: span 3;
+}
+
+.item-4 {
+    grid-row: span 2;
+}
+
+.item-5 {
+    grid-column: span 2;
+}
+
+.item-6 {
+    grid-column: span 2;
+}
+
+#test {
+    font-size: 0.2rem;
+}
+
 @keyframes circle-popup {
     from {
         scale: 0;

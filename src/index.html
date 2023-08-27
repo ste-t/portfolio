@@ -53,7 +53,7 @@
                 </a>
                 <a
                     onclick="scrollDown()"
-                    href="#lorem"
+                    href="#whoami"
                     id="scroll-down-cta"
                     class="bubble-button"
                 >
@@ -64,46 +64,16 @@
 
         <div style="height: calc(20vw + 11rem)"></div>
 
-        <section id="lorem">
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                deleniti voluptatum adipisci soluta eos quisquam at facilis
-                iusto quidem laborum tenetur laudantium maiores in, animi
-                consequatur aliquid porro, temporibus ipsum? Quia, esse
-                asperiores! Qui hic voluptatum distinctio sunt, impedit quasi
-                aut soluta beatae cumque. Natus tenetur nobis nisi
-                necessitatibus voluptatibus officia dolore nesciunt blanditiis
-                incidunt laboriosam impedit ex temporibus est saepe quisquam
-                placeat ducimus perspiciatis, reiciendis consequatur quam
-                asperiores voluptates perferendis cumque maiores. Sequi, hic
-                sapiente! Rerum quo ex debitis expedita ad perspiciatis quam
-                sunt corporis tempore veritatis atque maiores, consequuntur
-                deserunt similique sed? Mollitia quibusdam at ea sequi aliquid.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex rem
-                iusto placeat molestias, minus unde possimus qui eos, magnam
-                debitis nihil laudantium eveniet in delectus voluptate nobis
-                reprehenderit, suscipit dolorem porro dignissimos ratione. Fuga
-                voluptates nemo expedita aliquam, ab reiciendis fugiat ea minima
-                earum, facere quaerat deserunt voluptas sit consectetur corrupti
-                itaque blanditiis accusamus iste, culpa quae aut architecto.
-                Accusamus in alias assumenda temporibus consequuntur quam
-                doloremque omnis cumque, quod quae dolorem asperiores adipisci.
-                Mollitia facilis soluta odit ipsa. Veritatis delectus optio
-                nostrum, repellendus deleniti ex porro, nulla inventore tempore
-                soluta numquam corporis aliquid adipisci obcaecati veniam quia
-                voluptates labore. Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Odit animi aperiam officiis, sed cupiditate
-                architecto nisi excepturi delectus, velit ipsam perferendis
-                minus quisquam repellat cumque veniam libero ipsum soluta
-                laborum nulla? Atque blanditiis omnis, nisi incidunt corrupti
-                aspernatur maiores iste minus. Eum est dolor illo vitae, ea esse
-                exercitationem at soluta magni deleniti temporibus saepe dolorem
-                rerum aspernatur optio doloremque delectus ipsam consequatur
-                totam animi sit, magnam incidunt mollitia eveniet! Laboriosam
-                dolores, accusantium quod maxime odio expedita perspiciatis,
-                tenetur incidunt, aliquid fugiat rerum neque recusandae ex ipsa
-                animi. Harum animi, nemo ipsum vel facilis aliquam maiores
-                repellendus cumque nobis alias.
+        <section id="whoami">
+            <div class="container">
+                <div class="item item-1">
+                    <img id="pfp" src="assets/images/me.png" alt="" />
+                </div>
+                <div class="item item-2"></div>
+                <div class="item item-3"></div>
+                <div class="item item-4"></div>
+                <div class="item item-5"></div>
+                <div class="item item-6"></div>
             </div>
         </section>
 
@@ -151,6 +121,27 @@
             ipsum eaque architecto accusantium impedit fuga molestias placeat
             iste itaque error officiis deserunt veritatis? Maxime reprehenderit
             ipsum, a magni odio quisquam ratione accusamus.
+
+            <form action="" method="POST">
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Portfolio email submission"
+                />
+                <input type="hidden" name="_template" value="box" />
+
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" />
+                <textarea
+                    placeholder="Your Message"
+                    class="form-control"
+                    name="message"
+                    rows="10"
+                    required
+                ></textarea>
+
+                <button type="submit">Send</button>
+            </form>
         </section>
     </body>
 </html>
