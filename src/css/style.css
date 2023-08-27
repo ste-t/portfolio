@@ -4,9 +4,10 @@
     --pi: 3.14159265358979;
 
     --bg-color: #181b22;
-    --code-bg-color: #22242e;
-    --fg-color: #c3c7d1;
+    --bg-secondary-color: #22242e;
     --fg-color: white;
+    --accent-color: crimson;
+    --accent-color: #8325fc;
 }
 
 .bold {
@@ -71,7 +72,7 @@ a {
 }
 
 code {
-    background-color: var(--code-bg-color);
+    background-color: var(--bg-secondary-color);
     display: inline-block;
 
     border-radius: 9px;
@@ -118,7 +119,7 @@ section {
     --radius: 16vw;
 
     position: absolute;
-    background: var(--code-bg-color);
+    background: var(--bg-secondary-color);
 
     top: calc(-1 * var(--radius));
     left: calc(-1 * var(--radius));
@@ -147,7 +148,7 @@ section {
     --radius: 20vw;
 
     position: absolute;
-    background: var(--code-bg-color);
+    background: var(--bg-secondary-color);
 
     bottom: calc(-1 * var(--radius));
     right: calc(-1 * var(--radius));
@@ -177,23 +178,31 @@ section {
 
 .container {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 200px);
 
     gap: 15px;
 }
 
+#pfp {
+    width: 70%;
+}
+
+.command {
+    color: var(--accent-color);
+}
+
+.command::before {
+    content: "~ ";
+}
+
 .item {
-    background: var(--code-bg-color);
+    background: var(--bg-secondary-color);
     border-radius: 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#pfp {
-    width: 70%;
 }
 
 .item-2 {
