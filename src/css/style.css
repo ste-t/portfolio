@@ -176,7 +176,7 @@ section {
     transform: translate(62.7323%, 62.7323%) rotate(135deg);
 }
 
-.container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(4, 200px);
@@ -193,47 +193,51 @@ section {
     width: 70%;
 }
 
-.command {
-    color: var(--accent-color);
-}
+.grid-item {
+    font-weight: bold;
 
-.command::before {
-    content: "~ ";
-}
-
-.item {
     background: var(--bg-secondary-color);
     border-radius: 20px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     padding: 5%;
-    font-weight: bold;
+}
+.grid-item h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+.grid-item pre,
+.grid-item h2 {
+    margin: 0;
 }
 
-.item-1 {
+.grid-item-1 {
     grid-area: pfp;
+    justify-content: center;
+    align-items: center;
 }
-.item-2 {
+.grid-item-2 {
     grid-area: bio;
 }
-.item-3 {
+.grid-item-3 {
     grid-area: c;
+    color: var(--accent-color);
+    font-size: 0.15rem;
 }
-.item-4 {
+.grid-item-4 {
     grid-area: d;
 }
-.item-5 {
+.grid-item-5 {
     grid-column: e;
 }
-.item-6 {
+.grid-item-6 {
     grid-column: f;
 }
-
-#test {
-    font-size: 0.2rem;
+.grid-item-6 h2 {
+    color: var(--accent-color);
 }
 
 @keyframes circle-popup {
