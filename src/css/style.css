@@ -182,9 +182,9 @@ section {
     grid-template-rows: repeat(4, 200px);
     grid-template-areas:
         "pfp bio bio bio"
-        "c bio bio bio"
-        "c d e e"
-        "c d f f";
+        "ita bio bio bio"
+        "ita wkm-en wkm-ru wkm-ru"
+        "ita wkm-en scroll-down scroll-down";
 
     gap: 15px;
 }
@@ -223,18 +223,18 @@ section {
     grid-area: bio;
 }
 .grid-item-3 {
-    grid-area: c;
+    grid-area: ita;
     color: var(--accent-color);
     font-size: 0.15rem;
 }
 .grid-item-4 {
-    grid-area: d;
+    grid-area: wkm-en;
 }
 .grid-item-5 {
-    grid-column: e;
+    grid-column: wkm-ru;
 }
 .grid-item-6 {
-    grid-column: f;
+    grid-column: scroll-down;
 }
 .grid-item-6 h2 {
     color: var(--accent-color);
