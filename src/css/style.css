@@ -130,18 +130,18 @@ section {
     border-radius: 100%;
 
     animation: circle-popup 800ms both 1400ms;
-}
 
-#contact-cta i {
-    display: inline-flex;
+    & i {
+        display: inline-flex;
 
-    position: absolute;
-    font-size: calc(var(--radius) / 4);
+        position: absolute;
+        font-size: calc(var(--radius) / 4);
 
-    top: calc(4 / var(--pi) * var(--radius));
-    left: calc(4 / var(--pi) * var(--radius));
+        top: calc(4 / var(--pi) * var(--radius));
+        left: calc(4 / var(--pi) * var(--radius));
 
-    animation: ring 1200ms infinite ease-in-out 2200ms;
+        animation: ring 1200ms infinite ease-in-out 2200ms;
+    }
 }
 
 #scroll-down-cta {
@@ -159,21 +159,21 @@ section {
     border-radius: 100%;
 
     animation: circle-popup 800ms both 2100ms, spin 800ms both 2900ms;
+
+    & i {
+        display: inline-flex;
+
+        position: absolute;
+        font-size: calc(var(--radius) / 2);
+
+        overflow: hidden;
+
+        transform: translate(62.7323%, 62.7323%) rotate(135deg);
+    }
 }
 
 .spin-slide-out {
     animation: spin-slide-out 1200ms both !important;
-}
-
-#scroll-down-cta i {
-    display: inline-flex;
-
-    position: absolute;
-    font-size: calc(var(--radius) / 2);
-
-    overflow: hidden;
-
-    transform: translate(62.7323%, 62.7323%) rotate(135deg);
 }
 
 .grid-container {
@@ -207,14 +207,16 @@ section {
     align-items: center;
 
     padding: 5%;
-}
-.grid-item h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
-}
-.grid-item pre,
-.grid-item h2 {
-    margin: 0;
+
+    & h2 {
+        font-size: 2rem;
+        color: var(--accent-color);
+    }
+
+    & pre,
+    h2 {
+        margin: 0;
+    }
 }
 
 .grid-item-0 {
