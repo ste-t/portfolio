@@ -130,18 +130,18 @@ section {
     border-radius: 100%;
 
     animation: circle-popup 800ms both 1400ms;
+}
 
-    & i {
-        display: inline-flex;
+#contact-cta i {
+    display: inline-flex;
 
-        position: absolute;
-        font-size: calc(var(--radius) / 4);
+    position: absolute;
+    font-size: calc(var(--radius) / 4);
 
-        top: calc(4 / var(--pi) * var(--radius));
-        left: calc(4 / var(--pi) * var(--radius));
+    top: calc(4 / var(--pi) * var(--radius));
+    left: calc(4 / var(--pi) * var(--radius));
 
-        animation: ring 1200ms infinite ease-in-out 2200ms;
-    }
+    animation: ring 1200ms infinite ease-in-out 2200ms;
 }
 
 #scroll-down-cta {
@@ -159,17 +159,17 @@ section {
     border-radius: 100%;
 
     animation: circle-popup 800ms both 2100ms, spin 800ms both 2900ms;
+}
 
-    & i {
-        display: inline-flex;
+#scroll-down-cta i {
+    display: inline-flex;
 
-        position: absolute;
-        font-size: calc(var(--radius) / 2);
+    position: absolute;
+    font-size: calc(var(--radius) / 2);
 
-        overflow: hidden;
+    overflow: hidden;
 
-        transform: translate(62.7323%, 62.7323%) rotate(135deg);
-    }
+    transform: translate(62.7323%, 62.7323%) rotate(135deg);
 }
 
 .spin-slide-out {
@@ -187,64 +187,64 @@ section {
         "ita wkm-en scroll-down scroll-down";
 
     gap: 1rem;
+}
 
-    & .grid-item {
-        font-weight: bold;
+.grid-item {
+    font-weight: bold;
 
-        background: var(--bg-secondary-color);
-        border-radius: 20px;
+    background: var(--bg-secondary-color);
+    border-radius: 20px;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        padding: 5%;
+    padding: 5%;
+}
 
-        & h2 {
-            font-size: 2rem;
-            color: var(--accent-color);
-        }
+.grid-item h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
 
-        & pre,
-        h2 {
-            margin: 0;
-        }
-    }
+.grid-item pre,
+.grid-item h2 {
+    margin: 0;
+}
 
-    & #pfp {
-        width: 70%;
-    }
-    & #italy {
-        width: 80%;
-    }
+#pfp {
+    width: 70%;
+}
+#italy {
+    width: 80%;
+}
 
-    & .grid-item-0 {
-        grid-area: pfp;
+.grid-item-0 {
+    grid-area: pfp;
 
-        justify-content: center;
-        align-items: center;
-    }
-    & .grid-item-1 {
-        grid-area: bio;
-    }
-    & .grid-item-2 {
-        grid-area: ita;
+    justify-content: center;
+    align-items: center;
+}
+.grid-item-1 {
+    grid-area: bio;
+}
+.grid-item-2 {
+    grid-area: ita;
 
-        /* color: var(--accent-color);
-        font-size: 0.15rem; */
-    }
-    & .grid-item-3 {
-        grid-area: wkm-en;
-    }
-    & .grid-item-4 {
-        grid-column: wkm-ru;
-    }
-    & .grid-item-5 {
-        grid-column: scroll-down;
+    /* color: var(--accent-color);
+    font-size: 0.15rem; */
+}
+.grid-item-3 {
+    grid-area: wkm-en;
+}
+.grid-item-4 {
+    grid-column: wkm-ru;
+}
+.grid-item-5 {
+    grid-column: scroll-down;
 
-        color: var(--accent-color);
-        font-size: 2rem;
-    }
+    color: var(--accent-color);
+    font-size: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -288,46 +288,42 @@ section {
     }
 }
 
-#contact {
-    & form {
-        display: grid;
+#contact form {
+    display: grid;
 
-        grid-template-columns: minmax(0, 800px);
-        grid-template-rows: 100px 300px 100px;
+    grid-template-columns: minmax(0, 800px);
+    grid-template-rows: 100px 300px 100px;
 
-        gap: 1rem;
-        margin: 0 1rem 0 1rem;
+    gap: 1rem;
+    margin: 0 1rem 0 1rem;
 
-        margin: 1rem;
-    }
+    margin: 1rem;
+}
 
-    & button,
-    input,
-    textarea {
-        border: 0 none;
-        border-radius: 20px;
+#contact button,
+#contact input,
+#contact textarea {
+    border: 0 none;
+    border-radius: 20px;
 
-        padding: 2rem;
+    padding: 2rem;
 
-        background: var(--bg-secondary-color);
-        color: var(--fg-color);
+    background: var(--bg-secondary-color);
+    color: var(--fg-color);
 
-        font-size: 1.5rem;
-        font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-        /* height: 200px; */
-    }
+#contact textarea {
+    font-size: 1rem;
+    overflow-y: hidden;
+}
 
-    & textarea {
-        font-size: 1rem;
-        overflow-y: hidden;
-    }
-
-    & button {
-        cursor: pointer;
-        height: 100px;
-        text-align: left;
-    }
+#contact button {
+    cursor: pointer;
+    height: 100px;
+    text-align: left;
 }
 
 .nodisplay {
