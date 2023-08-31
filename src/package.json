@@ -3,6 +3,6 @@
         "@flaticon/flaticon-uicons": "^2.4.0"
     },
     "scripts": {
-        "build": "npm ci; cp -r node_modules/@flaticon/flaticon-uicons/css/ assets/flaticon/"
+        "build": "cp -r node_modules/@flaticon/flaticon-uicons/css/ assets/flaticon/"
     }
 }
