@@ -186,11 +186,14 @@ section {
         "ita wkm-en wkm-ru wkm-ru"
         "ita wkm-en scroll-down scroll-down";
 
-    gap: 15px;
+    gap: 1rem;
 }
 
 #pfp {
     width: 70%;
+}
+#italy {
+    width: 80%;
 }
 
 .grid-item {
@@ -226,8 +229,8 @@ section {
 .grid-item-2 {
     grid-area: ita;
 
-    color: var(--accent-color);
-    font-size: 0.15rem;
+    /* color: var(--accent-color);
+    font-size: 0.15rem; */
 }
 .grid-item-3 {
     grid-area: wkm-en;
@@ -260,6 +263,27 @@ section {
     .button:hover {
         cursor: pointer;
     }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr 1.4fr;
+        grid-template-rows: 0.5fr 1.5fr 1fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "pfp bio"
+            "ita bio"
+            "wkm-en wkm-en"
+            "wkm-ru wkm-ru"
+            "scroll-down scroll-down";
+
+        margin: 1rem;
+    }
+    .grid-item-1 {
+        padding: 10%;
+    }
+    /* .grid-item-2 {
+        font-size: 0.45vw;
+    } */
 }
 
 @keyframes circle-popup {
