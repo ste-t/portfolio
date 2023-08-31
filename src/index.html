@@ -202,35 +202,29 @@
         </section>
 
         <section id="contact">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-            quasi, incidunt, pariatur numquam, eaque illum enim deleniti minima
-            reiciendis fugiat inventore. Laboriosam provident placeat
-            consectetur officia blanditiis. Ipsa nesciunt minus fuga suscipit
-            eligendi nostrum iusto architecto cumque eveniet repudiandae sed
-            sint aspernatur delectus, quasi corporis magni veritatis odio
-            reiciendis vitae nihil quas? Odio facere, explicabo tempore eius,
-            ipsum eaque architecto accusantium impedit fuga molestias placeat
-            iste itaque error officiis deserunt veritatis? Maxime reprehenderit
-            ipsum, a magni odio quisquam ratione accusamus.
+            <form action="https://formspree.io/f/maygjnja" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_gotcha" class="nodisplay" />
 
-            <form action="" method="POST">
+                <!-- Fields -->
                 <input
-                    type="hidden"
-                    name="_subject"
-                    value="Portfolio email submission"
-                />
-                <input type="hidden" name="_template" value="box" />
-
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" />
-                <textarea
-                    placeholder="Your Message"
-                    class="form-control"
-                    name="message"
-                    rows="10"
                     required
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                />
+                <input
+                    name="subject"
+                    type="hidden"
+                    value="Portfolio submission from {{ email }}"
+                />
+                <textarea
+                    required
+                    name="message"
+                    placeholder="Your message"
                 ></textarea>
 
+                <!-- Send button -->
                 <button type="submit">Send</button>
             </form>
         </section>

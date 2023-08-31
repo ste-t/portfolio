@@ -286,6 +286,21 @@ section {
     } */
 }
 
+#contact {
+    & form {
+        display: flex;
+        flex-flow: column;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+}
+
+.nodisplay {
+    display: none;
+}
+
 @keyframes circle-popup {
     from {
         scale: 0;
