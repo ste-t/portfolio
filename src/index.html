@@ -41,7 +41,7 @@
     <body>
         <section id="hero">
             <div id="hello-friend-container">
-                <code class="big bold" id="hello-friend">
+                <code tabindex="1" class="big bold" id="hello-friend">
                     <span>~</span>
                     <span id="hello-friend-text">Hello friend_</span>
                 </code>
@@ -62,15 +62,13 @@
             </div>
         </section>
 
-        <div style="height: calc(20vw + 11rem)"></div>
-
         <section id="whoami">
             <div class="grid-container">
                 <div class="grid-item grid-item-0">
                     <!-- <span> <span class="command">jp2a</span> me.png</span> -->
                     <img id="pfp" src="assets/images/me-saturated.png" alt="" />
                 </div>
-                <div class="grid-item grid-item-1">
+                <div tabindex="2" class="grid-item grid-item-1">
                     <div>
                         <h2>~ cat Whoami</h2>
                         <p>
@@ -186,19 +184,108 @@
                         </pre
                     >
                 </div>
-                <a href="#projects" class="grid-item grid-item-5 button">
+                <a
+                    tabindex="3"
+                    href="#experience"
+                    class="grid-item grid-item-5 button"
+                >
                     <span>./scroll-down</span>
                 </a>
             </div>
         </section>
 
-        <section id="projects">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            eaque vero adipisci harum laudantium debitis magni. Soluta iure,
-            natus similique ducimus quos est maiores cum minima, aliquid
-            excepturi sequi laboriosam suscipit vel ex harum commodi temporibus
-            quidem? Quia fuga at, sint non fugiat molestias culpa, eum saepe
-            tempore, mollitia tenetur?
+        <section id="experience">
+            <div>
+                <div tabindex="4" class="bar title-bar">~ ls Experience/</div>
+
+                <div class="carousel-container">
+                    <div class="carousel carousel-primary">
+                        <div class="carousel-card carousel-card-0">
+                            Sys admin
+                        </div>
+                        <div class="carousel-card carousel-card-1">Linux</div>
+                        <div class="carousel-card carousel-card-2">
+                            Electronics
+                        </div>
+                        <div class="carousel-card carousel-card-3">
+                            Phone repair
+                        </div>
+                        <div class="carousel-card carousel-card-4">Web dev</div>
+                        <div class="carousel-card carousel-card-5">
+                            PC building
+                        </div>
+                        <div class="carousel-card carousel-card-6">
+                            Game dev
+                        </div>
+                    </div>
+                    <div class="carousel carousel-secondary">
+                        <div class="carousel-card carousel-card-0">
+                            Sys admin
+                        </div>
+                        <div class="carousel-card carousel-card-1">Linux</div>
+                        <div class="carousel-card carousel-card-2">
+                            Electronics
+                        </div>
+                        <div class="carousel-card carousel-card-3">
+                            Phone repair
+                        </div>
+                        <div class="carousel-card carousel-card-4">Web dev</div>
+                        <div class="carousel-card carousel-card-5">
+                            PC building
+                        </div>
+                        <div class="carousel-card carousel-card-6">
+                            Game dev
+                        </div>
+                    </div>
+                </div>
+
+                <a
+                    tabindex="5"
+                    href="#tools"
+                    class="button bar scroll-down-bar"
+                >
+                    ./scroll-down</a
+                >
+            </div>
+        </section>
+
+        <section id="tools">
+            <div>
+                <div tabindex="6" class="bar title-bar">~ ls Tools/</div>
+
+                <div class="carousel-container">
+                    <div class="carousel carousel-primary">
+                        <div class="carousel-card carousel-card-0">Linux</div>
+                        <div class="carousel-card carousel-card-1">
+                            Html/Css/Js
+                        </div>
+                        <div class="carousel-card carousel-card-2">Nginx</div>
+                        <div class="carousel-card carousel-card-3">Docker</div>
+                        <div class="carousel-card carousel-card-4">Python</div>
+                        <div class="carousel-card carousel-card-5">Git</div>
+                        <div class="carousel-card carousel-card-6">Github</div>
+                    </div>
+                    <div class="carousel carousel-secondary">
+                        <div class="carousel-card carousel-card-0">Linux</div>
+                        <div class="carousel-card carousel-card-1">
+                            HTML/CSS/JS
+                        </div>
+                        <div class="carousel-card carousel-card-2">Nginx</div>
+                        <div class="carousel-card carousel-card-3">Docker</div>
+                        <div class="carousel-card carousel-card-4">Python</div>
+                        <div class="carousel-card carousel-card-5">Git</div>
+                        <div class="carousel-card carousel-card-6">Github</div>
+                    </div>
+                </div>
+
+                <a
+                    tabindex="7"
+                    href="#contact"
+                    class="button bar scroll-down-bar"
+                >
+                    ./get-in-touch</a
+                >
+            </div>
         </section>
 
         <section id="contact">
@@ -208,6 +295,7 @@
 
                 <!-- Fields -->
                 <input
+                    tabindex="8"
                     required
                     type="email"
                     name="email"
@@ -219,13 +307,16 @@
                     value="Portfolio submission from {{ email }}"
                 />
                 <textarea
+                    tabindex="9"
                     required
                     name="message"
                     placeholder="## Your message"
                 ></textarea>
 
                 <!-- Send button -->
-                <button class="button" type="submit">./Send</button>
+                <button tabindex="10" class="button" type="submit">
+                    ./Send
+                </button>
             </form>
         </section>
     </body>
