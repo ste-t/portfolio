@@ -429,8 +429,19 @@ section#contact {
     font-size: 1.5rem;
 }
 
+*:focus,
+#contact button:focus,
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+
+    box-shadow: 0 0 0 4px var(--accent-color);
+    transition: box-shadow 300ms ease;
+}
+
 #contact textarea {
     font-size: 1rem;
+    resize: none;
 }
 
 #contact button {
