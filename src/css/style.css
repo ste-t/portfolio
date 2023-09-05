@@ -362,7 +362,7 @@ section#contact {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
     .carousel {
         width: auto;
         grid-template-columns: repeat(5, 200px);
