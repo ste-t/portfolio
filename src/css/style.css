@@ -463,6 +463,9 @@ section#contact {
 .footer i {
     display: flex;
 }
+.footer a:hover {
+    cursor: pointer;
+}
 .footer a:hover,
 .footer a:focus {
     box-shadow: none !important;

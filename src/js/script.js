@@ -23,11 +23,11 @@ const typewriter = new Typewriter("#hello-friend-text", {
 });
 
 // Animate the scroll down arrow when pressed
-function scrollDown() {
+document.querySelector("#scroll-down-cta").addEventListener("click", () => {
     document.querySelector("#scroll-down-cta").classList.add("spin-slide-out");
-}
+});
 
-// On page reload, scroll back to the top
-window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-};
+// Make footer email button focus the email form
+document.querySelector(".fi-br-at").addEventListener("click", () => {
+    document.querySelector('input[name="email"]').focus();
+});
