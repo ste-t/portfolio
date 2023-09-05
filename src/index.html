@@ -203,7 +203,9 @@
                         <div class="carousel-card carousel-card-0">
                             Sys admin
                         </div>
-                        <div class="carousel-card carousel-card-1">Linux</div>
+                        <div class="carousel-card carousel-card-1 accent-card">
+                            Curriculum Vitae
+                        </div>
                         <div class="carousel-card carousel-card-2">
                             Electronics
                         </div>
@@ -214,7 +216,7 @@
                         <div class="carousel-card carousel-card-5">
                             PC building
                         </div>
-                        <div class="carousel-card carousel-card-6">
+                        <div class="carousel-card carousel-card-6 accent-card">
                             Click the cards!
                         </div>
                     </div>
@@ -222,7 +224,9 @@
                         <div class="carousel-card carousel-card-0">
                             Sys admin
                         </div>
-                        <div class="carousel-card carousel-card-1">Linux</div>
+                        <div class="carousel-card carousel-card-1 accent-card">
+                            Curriculum Vitae
+                        </div>
                         <div class="carousel-card carousel-card-2">
                             Electronics
                         </div>
@@ -233,7 +237,7 @@
                         <div class="carousel-card carousel-card-5">
                             PC building
                         </div>
-                        <div class="carousel-card carousel-card-6">
+                        <div class="carousel-card carousel-card-6 accent-card">
                             Click the cards!
                         </div>
                     </div>
@@ -256,27 +260,27 @@
                 <div class="carousel-container">
                     <div class="carousel carousel-primary">
                         <div class="carousel-card carousel-card-0">Linux</div>
-                        <div class="carousel-card carousel-card-1">
-                            Html/Css/Js
+                        <div class="carousel-card carousel-card-1 accent-card">
+                            Curriculum Vitae
                         </div>
                         <div class="carousel-card carousel-card-2">Nginx</div>
                         <div class="carousel-card carousel-card-3">Docker</div>
                         <div class="carousel-card carousel-card-4">Python</div>
                         <div class="carousel-card carousel-card-5">Git</div>
-                        <div class="carousel-card carousel-card-6">
+                        <div class="carousel-card carousel-card-6 accent-card">
                             Click the cards!
                         </div>
                     </div>
                     <div class="carousel carousel-secondary">
                         <div class="carousel-card carousel-card-0">Linux</div>
-                        <div class="carousel-card carousel-card-1">
-                            Html/Css/Js
+                        <div class="carousel-card carousel-card-1 accent-card">
+                            Curriculum Vitae
                         </div>
                         <div class="carousel-card carousel-card-2">Nginx</div>
                         <div class="carousel-card carousel-card-3">Docker</div>
                         <div class="carousel-card carousel-card-4">Python</div>
                         <div class="carousel-card carousel-card-5">Git</div>
-                        <div class="carousel-card carousel-card-6">
+                        <div class="carousel-card carousel-card-6 accent-card">
                             Click the cards!
                         </div>
                     </div>
@@ -293,35 +297,52 @@
         </section>
 
         <section id="contact">
-            <form action="https://formspree.io/f/maygjnja" method="POST">
-                <!-- Honeypot -->
-                <input type="text" name="_gotcha" class="nodisplay" />
+            <div class="footer-and-contact">
+                <form action="https://formspree.io/f/maygjnja" method="POST">
+                    <!-- Honeypot -->
+                    <input type="text" name="_gotcha" class="nodisplay" />
 
-                <!-- Fields -->
-                <input
-                    tabindex="8"
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="# Your email"
-                />
-                <input
-                    name="subject"
-                    type="hidden"
-                    value="Portfolio submission from {{ email }}"
-                />
-                <textarea
-                    tabindex="9"
-                    required
-                    name="message"
-                    placeholder="## Your message"
-                ></textarea>
+                    <!-- Fields -->
+                    <input
+                        tabindex="8"
+                        required
+                        type="email"
+                        name="email"
+                        placeholder="# Your email"
+                    />
+                    <input
+                        name="subject"
+                        type="hidden"
+                        value="Portfolio submission from {{ email }}"
+                    />
+                    <textarea
+                        tabindex="9"
+                        required
+                        name="message"
+                        placeholder="## Your message"
+                    ></textarea>
 
-                <!-- Send button -->
-                <button tabindex="10" class="button" type="submit">
-                    ./Send
-                </button>
-            </form>
+                    <!-- Send button -->
+                    <button tabindex="10" class="button" type="submit">
+                        ./Send
+                    </button>
+                </form>
+                <div class="footer">
+                    <a tabindex="11" href=""><i class="fi fi-br-at"></i></a>
+                    <a tabindex="12" href=""
+                        ><i class="fi fi-brands-discord"></i
+                    ></a>
+                    <a tabindex="13" href=""
+                        ><i class="fi fi-brands-telegram"></i
+                    ></a>
+                    <a tabindex="14" href=""
+                        ><i class="fi fi-brands-youtube"></i
+                    ></a>
+                    <a tabindex="15" href=""
+                        ><i class="fi fi-brands-github"></i
+                    ></a>
+                </div>
+            </div>
         </section>
     </body>
 </html>
