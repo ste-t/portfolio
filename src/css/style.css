@@ -353,7 +353,7 @@ section#contact {
 }
 .carousel-primary,
 .carousel-secondary {
-    animation: carousel-primary both 5500ms linear 0s infinite;
+    animation: carousel 5500ms linear 0s infinite;
 }
 @media (hover: hover) {
     .carousel-container:hover .carousel-primary,
@@ -362,7 +362,14 @@ section#contact {
     }
 }
 
-@keyframes carousel-primary {
+@media (max-width: 1050px) {
+    .carousel {
+        width: auto;
+        grid-template-columns: repeat(5, 200px);
+    }
+}
+
+@keyframes carousel {
     0% {
         translate: 0%;
     }
