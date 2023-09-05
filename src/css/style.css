@@ -351,11 +351,15 @@ section#contact {
 
     gap: var(--cards-gap);
 }
-.carousel-primary {
-    animation: carousel-primary 5500ms linear 0s infinite;
-}
+.carousel-primary,
 .carousel-secondary {
-    animation: carousel-primary 5500ms linear 0s infinite;
+    animation: carousel-primary both 5500ms linear 0s infinite;
+}
+@media (hover: hover) {
+    .carousel-container:hover .carousel-primary,
+    .carousel-container:hover .carousel-secondary {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes carousel-primary {
@@ -364,14 +368,6 @@ section#contact {
     }
     100% {
         translate: -100%;
-    }
-}
-@keyframes carousel-secondary {
-    0% {
-        translate: 100%;
-    }
-    100% {
-        translate: 0%;
     }
 }
 
@@ -393,6 +389,9 @@ section#contact {
 }
 .carousel-card-5 {
     grid-column: 2 span;
+}
+.carousel-card-6 {
+    background: var(--accent-color);
 }
 
 @media (hover: hover) {
