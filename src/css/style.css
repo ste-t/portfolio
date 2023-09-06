@@ -8,7 +8,6 @@
     --bg-secondary-color: #22242e;
     --fg-color: white;
     --fg-secondary-color: #757575;
-    --accent-color: crimson;
     --accent-color: #8325fc;
 
     --cards-radius: 20px;
@@ -460,21 +459,43 @@ section#contact {
     }
 }
 
-.footer i {
+.footer i,
+.footer svg {
     display: flex;
+}
+.footer a {
+    -webkit-tap-highlight-color: transparent;
+
+    fill: var(--fg-color);
 }
 .footer a:hover {
     cursor: pointer;
 }
-.footer a:hover,
-.footer a:focus {
+
+.footer a:active {
     box-shadow: none !important;
     color: var(--accent-color);
-    transition: color 300ms ease;
+    fill: var(--accent-color);
+
+    transition: none;
 }
-.footer:focus-within {
-    box-shadow: 0 0 0 4px var(--accent-color);
-    transition: box-shadow 300ms ease;
+@media (hover: hover) {
+    .footer a:hover,
+    .footer a:focus {
+        box-shadow: none !important;
+        color: var(--accent-color);
+        fill: var(--accent-color);
+
+        transition: color 300ms ease;
+        transition: fill 300ms ease;
+    }
+}
+
+@media (hover: hover) {
+    .footer:focus-within {
+        box-shadow: 0 0 0 4px var(--accent-color);
+        transition: box-shadow 300ms ease;
+    }
 }
 
 #contact form {
@@ -503,8 +524,8 @@ section#contact {
     font-size: 1.5rem;
 }
 
-*:focus,
-#contact button:focus,
+*:focus-visible,
+#contact button:focus-visible,
 #contact input:focus,
 #contact textarea:focus {
     outline: none;
