@@ -680,3 +680,14 @@ input::placeholder {
         opacity: var(--hover-opacity);
     }
 }
+#cv + div {
+    display: inline-flex;
+    flex-flow: column;
+
+    width: 100%;
+    align-items: center;
+
+    padding-bottom: 1rem;
+
+    color: var(--fg-secondary-color);
+}
