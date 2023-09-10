@@ -184,7 +184,8 @@ section {
 section {
     margin-bottom: calc(20vw + 11rem);
 }
-section#contact {
+section#contact,
+section#cv {
     margin-bottom: 0;
 }
 
@@ -633,5 +634,49 @@ input::placeholder {
     .typewriter-cursor {
         opacity: 1;
         animation: none;
+    }
+}
+
+#cv {
+    gap: var(--cards-gap);
+    font-size: 1.3rem;
+}
+.cv-button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 5rem;
+    width: 25rem;
+
+    background: var(--bg-secondary-color);
+
+    padding: 2rem;
+    border-radius: var(--cards-radius);
+
+    gap: 1rem;
+}
+.cv-button img {
+    width: 2.5rem;
+}
+@media (max-width: 27rem) {
+    .cv-button {
+        width: calc(100% - 2 * var(--cards-gap));
+    }
+}
+.cv-button {
+    --hover-opacity: 70%;
+    -webkit-tap-highlight-color: transparent;
+}
+.cv-button:active {
+    opacity: var(--hover-opacity);
+}
+@media (hover: hover) {
+    .cv-button:hover {
+        cursor: pointer;
+    }
+    .cv-button:hover {
+        opacity: var(--hover-opacity);
     }
 }
