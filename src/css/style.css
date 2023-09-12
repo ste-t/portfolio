@@ -350,30 +350,47 @@ section#cv {
 .carousel {
     display: grid;
 
-    width: 140vw;
+    /* width: 100vw; */
     /* height: 50vh; */
     padding: var(--cards-gap);
     padding-left: calc(var(--cards-gap) / 2);
     padding-right: calc(var(--cards-gap) / 2);
 
-    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr 1fr;
 
     gap: var(--cards-gap);
-}
-.carousel {
+
     animation: carousel 8000ms linear 0s infinite;
+}
+#experience .carousel {
+    width: 190vw;
+    grid-template-columns: 1.9fr 1fr 0.9fr repeat(7, 1fr);
+}
+#tools .carousel {
+    width: 140vw;
+    grid-template-columns: repeat(8, 1fr);
 }
 @media (hover: hover) {
     .carousel-container:hover .carousel {
         animation-play-state: paused;
     }
 }
+@media (hover: none) {
+    .carousel-container:has(div.front) .carousel {
+        animation-play-state: paused;
+    }
+}
 
 @media (max-width: 1000px) {
-    .carousel {
+    #experience .carousel,
+    #tools .carousel {
         width: auto;
         height: 50vh;
+    }
+    #experience .carousel {
+        grid-template-columns: repeat(10, 200px);
+    }
+    #tools .carousel {
         grid-template-columns: repeat(8, 200px);
     }
     .carousel-card {
@@ -400,14 +417,80 @@ section#cv {
     align-items: center;
     text-align: center;
 
-    /* padding: 1rem; */
-
-    cursor: pointer;
+    font-size: 1.3rem;
 }
-.carousel-card img {
+.accent-card {
+    padding: 1rem;
+    font-size: 1.6rem;
+    background: var(--accent-color);
+}
+@media (min-width: 1500px) {
+    .carousel-card {
+        font-size: 1.8rem;
+    }
+    .accent-card {
+        font-size: 2.2rem;
+    }
+}
+
+#experience .carousel {
+    height: 50vh;
+}
+#experience .carousel-card img {
+    height: 55%;
+    width: 55%;
+}
+#experience .carousel-card {
+    padding: 1.5rem;
+}
+#experience .carousel-card-0 {
+    grid-area: portfolio;
+}
+#experience .carousel-card-1 {
+    grid-area: cv;
+}
+#experience .carousel-card-2 {
+    grid-area: github;
+}
+#experience .carousel-card-3 {
+    grid-area: tux;
+}
+#experience .carousel-card-4 {
+    grid-area: biscotto;
+}
+#experience .carousel-card-5 {
+    grid-area: duco;
+}
+#experience .carousel-card-6 {
+    grid-area: cta;
+}
+#experience .carousel-card-7 {
+    grid-area: sysadmin;
+}
+#experience .carousel-card-8 {
+    grid-area: webdev;
+}
+#experience .carousel-card-9 {
+    grid-area: phonerepair;
+}
+#experience .carousel-card-10 {
+    grid-area: gamedev;
+}
+#experience .carousel-card-11 {
+    grid-area: electronics;
+}
+#experience .carousel-card-12 {
+    grid-area: hover-cta;
+}
+#experience .carousel {
+    grid-template-areas:
+        "portfolio cv cv cv duco phonerepair phonerepair tux gamedev gamedev"
+        "portfolio sysadmin github electronics cta cta webdev webdev biscotto hover-cta";
+}
+
+#tools .carousel-card img {
     height: 200px;
 }
-
 #tools .carousel-card-0 {
     grid-area: linux;
 }
@@ -450,11 +533,6 @@ section#cv {
         "linux ms graphics programming cta cloud webdev electronics";
 }
 
-.accent-card {
-    font-size: 1.6rem;
-    background: var(--accent-color);
-}
-
 @media (hover: hover) {
     .carousel-container:hover > .carousel > * {
         opacity: 20%;
@@ -463,6 +541,21 @@ section#cv {
         opacity: 100% !important;
         transform: scale(103%);
     }
+}
+
+.carousel-card a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+.carousel-card {
+    user-select: none;
+}
+
+.carousel-card:has(.front) > * {
+    display: none;
+}
+.carousel-card .front {
+    display: initial;
 }
 
 .footer-and-contact {

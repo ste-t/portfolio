@@ -22,6 +22,8 @@ const typewriter = new Typewriter("#hello-friend-text", {
     pauseFor: 750,
 });
 
+const can_hover = window.matchMedia("(hover: hover)").matches;
+
 // Animate the scroll down arrow when pressed
 document.querySelector("#scroll-down-cta").addEventListener("click", () => {
     document.querySelector("#scroll-down-cta").classList.add("spin-slide-out");
@@ -30,4 +32,24 @@ document.querySelector("#scroll-down-cta").addEventListener("click", () => {
 // Make footer email button focus the email form
 document.querySelector(".fi-br-at").addEventListener("click", () => {
     document.querySelector('input[name="email"]').focus();
+});
+
+document.querySelectorAll(".carousel-card:has(.front)").forEach((e) => {
+    const toggle = () => {
+        setTimeout(() => {
+            for (const c of e.children) {
+                c.classList.toggle("front");
+            }
+        }, 5);
+    };
+
+    if (can_hover) {
+        e.addEventListener("mouseenter", toggle);
+        e.addEventListener("mouseleave", toggle);
+    } else {
+        e.addEventListener("mouseenter", () => {
+            toggle();
+            setTimeout(toggle, 2000);
+        });
+    }
 });
