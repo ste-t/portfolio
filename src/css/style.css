@@ -46,11 +46,11 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
-section {
+/* section {
     scroll-snap-align: start;
-}
+} */
 
 html,
 body {
