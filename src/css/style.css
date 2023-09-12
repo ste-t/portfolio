@@ -342,28 +342,30 @@ section#cv {
 
 .carousel-container {
     display: flex;
+    flex-grow: 1;
+}
+.carousel-container * {
+    overflow: hidden;
 }
 .carousel {
     display: grid;
 
-    width: 100vw;
-    height: 50vh;
+    width: 140vw;
+    /* height: 50vh; */
     padding: var(--cards-gap);
     padding-left: calc(var(--cards-gap) / 2);
     padding-right: calc(var(--cards-gap) / 2);
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr 1fr;
 
     gap: var(--cards-gap);
 }
-.carousel-primary,
-.carousel-secondary {
-    animation: carousel 5500ms linear 0s infinite;
+.carousel {
+    animation: carousel 8000ms linear 0s infinite;
 }
 @media (hover: hover) {
-    .carousel-container:hover .carousel-primary,
-    .carousel-container:hover .carousel-secondary {
+    .carousel-container:hover .carousel {
         animation-play-state: paused;
     }
 }
@@ -371,7 +373,11 @@ section#cv {
 @media (max-width: 1000px) {
     .carousel {
         width: auto;
-        grid-template-columns: repeat(5, 200px);
+        height: 50vh;
+        grid-template-columns: repeat(8, 200px);
+    }
+    .carousel-card {
+        padding: 1rem;
     }
 }
 
@@ -392,21 +398,60 @@ section#cv {
 
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    /* padding: 1rem; */
 
     cursor: pointer;
 }
+.carousel-card img {
+    height: 200px;
+}
 
-.carousel-card-2 {
-    grid-column: 2 span;
+#tools .carousel-card-0 {
+    grid-area: linux;
 }
-.carousel-card-3 {
-    grid-row: 2 span;
+#tools .carousel-card-1 {
+    grid-area: cv;
 }
-.carousel-card-5 {
-    grid-column: 2 span;
+#tools .carousel-card-2 {
+    grid-area: vc;
+}
+#tools .carousel-card-3 {
+    grid-area: programming;
+}
+#tools .carousel-card-4 {
+    grid-area: editors;
+}
+#tools .carousel-card-5 {
+    grid-area: webdev;
+}
+#tools .carousel-card-6 {
+    grid-area: cta;
+}
+#tools .carousel-card-7 {
+    grid-area: ms;
+}
+#tools .carousel-card-8 {
+    grid-area: graphics;
+}
+#tools .carousel-card-9 {
+    grid-area: cloud;
+}
+#tools .carousel-card-10 {
+    grid-area: electronics;
+}
+#tools .carousel-card-11 {
+    grid-area: gamedev;
+}
+#tools .carousel {
+    grid-template-areas:
+        "linux cv cv programming vc editors webdev gamedev"
+        "linux ms graphics programming cta cloud webdev electronics";
 }
 
 .accent-card {
+    font-size: 1.6rem;
     background: var(--accent-color);
 }
 
