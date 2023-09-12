@@ -613,12 +613,23 @@ section#cv {
     display: flex;
 }
 .footer a {
+    display: flex;
     -webkit-tap-highlight-color: transparent;
 
+    justify-content: center;
+    align-items: center;
+
     fill: var(--fg-color);
+    width: 100px;
 }
 .footer a:hover {
     cursor: pointer;
+}
+@media (max-width: 550px) {
+    .footer a {
+        width: auto;
+        height: 100px;
+    }
 }
 
 .footer a:active {
