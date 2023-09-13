@@ -383,6 +383,10 @@ section#cv {
     .carousel-container:has(div.front) .carousel {
         animation-play-state: paused;
     }
+    /** Firefox fallback */
+    .carousel-container.has-div-front .carousel {
+        animation-play-state: paused;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -558,8 +562,31 @@ section#cv {
 .carousel-card:has(.front) > * {
     display: none;
 }
+/** Firefox fallback */
+.carousel-card.has-front > * {
+    display: none;
+}
 .carousel-card .front {
     display: initial;
+}
+
+@media (hover: hover) {
+    .carousel-container:hover .carousel-card:has(.front) img {
+        animation: pulse 2500ms infinite;
+    }
+    /** Firefox fallback */
+    .carousel-container:hover .carousel-card.has-front img {
+        animation: pulse 2500ms infinite;
+    }
+}
+@media (hover: none) {
+    .carousel-container:has(div.front) img {
+        animation: pulse 2500ms infinite;
+    }
+    /** Firefox fallback */
+    .carousel-container.has-div-front img {
+        animation: pulse 2500ms infinite;
+    }
 }
 
 .footer-and-contact {
@@ -764,6 +791,20 @@ input::placeholder {
     to {
         rotate: 0deg;
         translate: 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
 

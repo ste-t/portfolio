@@ -34,12 +34,34 @@ document.querySelector(".fi-br-at").addEventListener("click", () => {
     document.querySelector('input[name="email"]').focus();
 });
 
-document.querySelectorAll(".carousel-card:has(.front)").forEach((e) => {
+//* Temporary solution until Firefox catches up with :has()
+document.querySelectorAll(".carousel-card").forEach((card) => {
+    for (const c of card.children) {
+        if (c.classList.contains("front")) {
+            card.classList.toggle("has-front");
+        }
+    }
+});
+
+//* Temporary solution until Firefox catches up with :has()
+const refresh = () => {
+    document.querySelectorAll(".carousel-container").forEach((container) => {
+        container.classList.toggle(
+            "has-div-front",
+            container.querySelector("div.front") !== null
+        );
+    });
+};
+
+// document.querySelectorAll(".carousel-card:has(.front)").forEach((e) => {
+document.querySelectorAll(".carousel-card.has-front").forEach((e) => {
     const toggle = () => {
         setTimeout(() => {
             for (const c of e.children) {
                 c.classList.toggle("front");
             }
+
+            refresh();
         }, 5);
     };
 
