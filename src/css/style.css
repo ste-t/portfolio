@@ -580,20 +580,20 @@ section#cv {
 
 @media (hover: hover) {
     .carousel-container:hover .carousel-card:has(.front) img {
-        animation: pulse var(--carousel-anim-time) infinite;
+        animation: pulse var(--carousel-icons-anim-time) infinite;
     }
     /** Firefox fallback */
     .carousel-container:hover .carousel-card.has-front img {
-        animation: pulse var(--carousel-anim-time) infinite;
+        animation: pulse var(--carousel-icons-anim-time) infinite;
     }
 }
 @media (hover: none) {
     .carousel-container:has(div.front) img {
-        animation: pulse var(--carousel-anim-time) infinite;
+        animation: pulse var(--carousel-icons-anim-time) infinite;
     }
     /** Firefox fallback */
     .carousel-container.has-div-front img {
-        animation: pulse var(--carousel-anim-time) infinite;
+        animation: pulse var(--carousel-icons-anim-time) infinite;
     }
 }
 
