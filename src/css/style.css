@@ -12,6 +12,9 @@
 
     --cards-radius: 20px;
     --cards-gap: 1rem;
+
+    --carousel-anim-time: 8000ms;
+    --carousel-icons-anim-time: 2500ms;
 }
 
 .bold {
@@ -351,6 +354,11 @@ section#cv {
 .carousel-container * {
     overflow: hidden;
 }
+@media (max-width: 600px) {
+    :root {
+        --carousel-anim-time: 11250ms;
+    }
+}
 .carousel {
     display: grid;
 
@@ -364,7 +372,7 @@ section#cv {
 
     gap: var(--cards-gap);
 
-    animation: carousel 8000ms linear 0s infinite;
+    animation: carousel var(--carousel-anim-time) linear 0s infinite;
 }
 #experience .carousel {
     width: 190vw;
@@ -572,20 +580,20 @@ section#cv {
 
 @media (hover: hover) {
     .carousel-container:hover .carousel-card:has(.front) img {
-        animation: pulse 2500ms infinite;
+        animation: pulse var(--carousel-anim-time) infinite;
     }
     /** Firefox fallback */
     .carousel-container:hover .carousel-card.has-front img {
-        animation: pulse 2500ms infinite;
+        animation: pulse var(--carousel-anim-time) infinite;
     }
 }
 @media (hover: none) {
     .carousel-container:has(div.front) img {
-        animation: pulse 2500ms infinite;
+        animation: pulse var(--carousel-anim-time) infinite;
     }
     /** Firefox fallback */
     .carousel-container.has-div-front img {
-        animation: pulse 2500ms infinite;
+        animation: pulse var(--carousel-anim-time) infinite;
     }
 }
 
