@@ -1,0 +1,40 @@
+:root {
+  color-scheme: dark;
+
+  --page: #0c0c0d;
+  --panel: #131316;
+  --panel-hover: #191920;
+
+  --text: #ecece4;
+  --text-secondary: #93938c;
+  --text-muted: #55554f;
+
+  --border: #2a2a30;
+  --border-hover: #3e3e46;
+
+  --accent: #8f90c2;
+  --accent-ink: #0c0c0d;
+
+  --font-display: "Archivo Expanded", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --space-8: 9rem;
+
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --content-width: 1440px;
+
+  --ease-mechanical: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 130ms;
+  --duration-medium: 220ms;
+
+  --line: 1px solid var(--border);
+  --line-strong: 2px solid var(--border);
+}

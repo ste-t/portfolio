@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0C0C0D" />
+
+    <meta
+      name="description"
+      content="A portfolio of software, infrastructure, hardware engineering, and research."
+    />
+
+    <title>Izbasa Stefan - Portfolio</title>
+
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Izbasa Stefan - home">
+        <span class="wordmark-mark" aria-hidden="true">T.</span>
+        <span>Izbasa Stefan</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#work">Work <span>01</span></a>
+        <a href="#writing">Writing <span>02</span></a>
+        <a href="#about">About <span>03</span></a>
+      </nav>
+
+      <a class="header-contact" href="#contact">
+        <span class="status-dot" aria-hidden="true"></span>
+        Get in touch
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="#work">Selected work <span>01</span></a>
+        <a href="#writing">Writing <span>02</span></a>
+        <a href="#about">About <span>03</span></a>
+        <a href="#contact">Get in touch <span>04</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top">
+        <div class="hero-meta mono">
+          <span>COMPUTER ENGINEERING / ITALY</span>
+          <span>SOFTWARE · SYSTEMS · HARDWARE</span>
+        </div>
+
+        <div class="hero-heading">
+          <p class="eyebrow">
+            <span class="accent-square"></span> ENGINEERING ACROSS DISCIPLINES
+          </p>
+          <h1>
+            Understand<br />
+            the system<span class="accent-period">.</span><br />
+            <span class="heading-muted">Build the thing.</span>
+          </h1>
+        </div>
+
+        <div class="hero-bottom">
+          <p class="hero-description">
+            I build and investigate systems across software, infrastructure,
+            hardware, and research.
+            <br />
+            From understanding how things work to making them work better.
+          </p>
+
+          <a class="text-link" href="#work">
+            Explore selected work
+            <span class="link-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="hero-index mono" aria-hidden="true">
+          <span>PORTFOLIO</span>
+          <span>BUILDING SINCE 2019</span>
+        </div>
+      </section>
+
+      <section class="work-section section-shell section-frame" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow mono">01 / SELECTED WORK</p>
+            <h2>
+              Things I've<br class="mobile-break" />
+              <span class="heading-muted">built.</span>
+            </h2>
+          </div>
+          <p class="section-intro">
+            A selection of projects that combine practical engineering with
+            curiosity about how systems work.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-featured">
+            <a
+              class="project-visual project-visual-subtles-grid"
+              href="https://blog.tste.dev/en/posts/laptop-to-rack-mounted-server"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Read the laptop-to-rack-server project write-up."
+            >
+              <div class="visual-top mono">
+                <span>HW / 001</span>
+                <span>INFRASTRUCTURE</span>
+              </div>
+
+              <img
+                class="project-image"
+                src="/images/projects/laptop-to-rack-mounted-server/enclosure-spin-q70.webp"
+                alt=""
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span class="visual-corner mono">PLT-001</span>
+            </a>
+
+            <div class="project-info">
+              <div class="project-meta mono">
+                <span>HARDWARE / INFRASTRUCTURE</span>
+                <span>01</span>
+              </div>
+              <h3>From laptop<br />to rack server.</h3>
+              <p>
+                Turning an old laptop motherboard into a rack-mounted server
+                through hardware reverse engineering, custom fabrication, and
+                software automation.
+              </p>
+              <div class="tag-list mono">
+                <span>LINUX</span>
+                <span>CAD</span>
+                <span>REVERSE ENGINEERING</span>
+                <span>HARDWARE</span>
+              </div>
+              <a
+                class="text-link"
+                href="https://blog.tste.dev/en/posts/laptop-to-rack-mounted-server"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read more
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-visual"
+              href="https://ai.tste.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the interactive CNN visualizer"
+            >
+              <div class="visual-top mono">
+                <span>SW / 002</span>
+                <span>COMPUTER VISION</span>
+              </div>
+
+              <img
+                class="project-image"
+                src="/images/projects/laptop-to-rack-mounted-server/cnn.png"
+                alt=""
+                width="1567"
+                height="1131"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span class="visual-corner mono">PLT-002</span>
+            </a>
+
+            <div class="project-info">
+              <div class="project-meta mono">
+                <span>SOFTWARE / VISUALIZATION</span>
+                <span>02</span>
+              </div>
+              <h3>Inside a neural network.</h3>
+              <p>
+                An interactive 3D visualization of convolutional neural
+                networks, connecting a Python-trained model with a browser-based
+                learning experience.
+              </p>
+              <div class="tag-list mono">
+                <span>PYTHON</span>
+                <span>TENSORFLOW</span>
+                <span>THREE.JS</span>
+              </div>
+              <a
+                class="text-link"
+                href="https://ai.tste.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore the visualizer
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a
+              class="project-visual blog-visual"
+              href="https://blog.tste.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Read the technical blog"
+            >
+              <div class="visual-top mono">
+                <span>WR / 003</span>
+                <span>TECHNICAL WRITING</span>
+              </div>
+
+              <div class="blog-graphic" aria-hidden="true">
+                <div class="blog-sheet">
+                  <div class="blog-sheet-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="blog-sheet-content">
+                    <span class="blog-line blog-line-heading"></span>
+                    <span class="blog-line"></span>
+                    <span class="blog-line blog-line-short"></span>
+                    <span class="blog-line"></span>
+                    <span class="blog-line blog-line-medium"></span>
+                    <span class="blog-code-line"></span>
+                    <span class="blog-code-line blog-code-line-short"></span>
+                  </div>
+                </div>
+              </div>
+
+              <span class="visual-corner mono">PLT-003</span>
+            </a>
+
+            <div class="project-info">
+              <div class="project-meta mono">
+                <span>WRITING / TECHNICAL NOTES</span>
+                <span>03</span>
+              </div>
+              <h3>Notes from the workbench.</h3>
+              <p>
+                Technical writeups on self-hosting, Linux infrastructure,
+                hardware reverse engineering, microsoldering, and the process
+                behind building and repairing systems.
+              </p>
+              <div class="tag-list mono">
+                <span>LINUX</span>
+                <span>HARDWARE</span>
+                <span>CYBERSECURITY</span>
+                <span>DOCUMENTATION</span>
+              </div>
+              <a
+                class="text-link"
+                href="https://blog.tste.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the field notes
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section section-shell" id="writing">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow mono">02 / FIELD NOTES</p>
+            <h2>
+              Document the<br /><span class="heading-muted">process.</span>
+            </h2>
+          </div>
+          <p class="section-intro">
+            Technical notes from taking things apart, understanding them, and
+            putting them back together.
+          </p>
+        </div>
+
+        <div class="writing-list">
+          <a
+            class="writing-item"
+            href="https://blog.tste.dev/en/posts/email-server"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="writing-number mono">NOTE-001</span>
+            <span class="writing-copy">
+              <strong>Building and maintaining a personal email server</strong>
+              <span>Infrastructure / Linux / Email / Privacy</span>
+            </span>
+            <span class="writing-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="writing-item"
+            href="https://blog.tste.dev/en/posts/laptop-to-rack-mounted-server"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="writing-number mono">NOTE-002</span>
+            <span class="writing-copy">
+              <strong
+                >Reverse engineering a laptop motherboard and turning it into
+                rack-mounted equipment</strong
+              >
+              <span>Hardware / Microsoldering / Fabrication / Networking</span>
+            </span>
+            <span class="writing-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-section section-shell section-frame" id="about">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow mono">03 / PROFILE</p>
+            <h2>
+              Curiosity, made<br /><span class="heading-muted">practical.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="about-lead">
+              I'm a computer engineering student interested in what happens
+              between the layers.
+            </p>
+            <p>
+              My work spans software, Linux infrastructure, hardware, and
+              technical investigation, with a particular interest in
+              cybersecurity, privacy, and understanding how systems work beneath
+              the surface. I enjoy exploring systems from the hardware and
+              firmware layers up to the applications people use, then applying
+              what I learn to build practical solutions.
+            </p>
+            <p>
+              Beyond software, I work with electronics, CAD, 3D printing, and
+              hardware repair, including component-level troubleshooting and
+              microsoldering. I value hands-on experimentation, careful
+              documentation, and understanding a problem before trying to solve
+              it.
+            </p>
+          </div>
+
+          <div class="capability-panel">
+            <div class="panel-heading mono">
+              <span>AREAS OF PRACTICE</span>
+              <span>04</span>
+            </div>
+
+            <div class="capability-row">
+              <span class="capability-index mono">A</span>
+              <div>
+                <h3>Software</h3>
+                <p>Programming, web development, automation</p>
+              </div>
+            </div>
+
+            <div class="capability-row">
+              <span class="capability-index mono">B</span>
+              <div>
+                <h3>Infrastructure</h3>
+                <p>Linux, self-hosting, networking, server administration</p>
+              </div>
+            </div>
+
+            <div class="capability-row">
+              <span class="capability-index mono">C</span>
+              <div>
+                <h3>Hardware</h3>
+                <p>Electronics, CAD, fabrication</p>
+              </div>
+            </div>
+
+            <div class="capability-row">
+              <span class="capability-index mono">D</span>
+              <div>
+                <h3>Technical Investigation</h3>
+                <p>Reverse engineering, cybersecurity, digital forensics</p>
+              </div>
+            </div>
+
+            <a
+              class="cv-link"
+              href="/cv/en.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View curriculum vitae
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-shell" id="contact">
+        <p class="eyebrow mono">04 / CONTACT</p>
+        <h2>
+          Have something<br />interesting to
+          <span class="heading-muted">build?</span>
+        </h2>
+        <div class="contact-bottom">
+          <div>
+            <p>
+              Open to interesting opportunities, meaningful projects, and
+              technical collaborations.
+            </p>
+            <div class="contact-links mono" aria-label="Elsewhere online">
+              <a
+                href="https://github.com/ste-t"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GITHUB <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/ste-t"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LINKEDIN <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://blog.tste.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BLOG <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="contact-button" href="mailto:contact@tste.dev">
+            Start a conversation
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="wordmark footer-wordmark" href="#top">
+        <span class="wordmark-mark" aria-hidden="true">T.</span>
+        <span>Izbasa Stefan</span>
+      </a>
+      <span class="footer-note mono"
+        >DESIGNED AND BUILT WITH INTENTION - INSPIRED BY ZEN BRUTALISM</span
+      >
+      <a class="back-to-top mono" href="#top">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>
