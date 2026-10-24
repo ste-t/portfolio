@@ -40,7 +40,8 @@
 
 .desktop-nav a:hover,
 .header-contact:hover,
-.text-link:hover {
+.text-link:hover,
+.honor-entry:hover .text-link {
   color: var(--accent);
 }
 
@@ -123,7 +124,8 @@
     border-color var(--duration-fast) var(--ease-mechanical);
 }
 
-.text-link:hover .link-arrow {
+.text-link:hover .link-arrow,
+.honor-entry:hover .link-arrow {
   border-color: var(--accent);
   background: var(--accent);
   color: var(--accent-ink);
@@ -229,13 +231,15 @@
   border-bottom: 1px solid var(--border);
 }
 
-a.writing-item {
+a.writing-item,
+a.honor-entry {
   transition:
     padding var(--duration-medium) var(--ease-mechanical),
     background var(--duration-fast) var(--ease-mechanical);
 }
 
-a.writing-item:hover {
+a.writing-item:hover,
+a.honor-entry:hover {
   padding-inline: 1rem;
   background: var(--panel);
 }
@@ -277,6 +281,45 @@ a.writing-item:hover {
 .writing-item:hover .writing-arrow {
   background: var(--accent);
   color: var(--accent-ink);
+}
+
+.honors-content {
+  border-top: 1px solid var(--border);
+}
+
+.honor-entry {
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.honor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.honor-details {
+  max-width: 620px;
+}
+
+.honor-details h3 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.honor-details p {
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.honor-highlight {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .capability-panel {
@@ -545,6 +588,12 @@ a.writing-item:hover {
   .writing-arrow {
     grid-column: 2;
     grid-row: 1 / span 2;
+  }
+
+  .honor-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
   }
 
   .contact-bottom {

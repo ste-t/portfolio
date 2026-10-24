@@ -73,6 +73,10 @@
   padding-block: var(--space-8);
 }
 
+.honors-section {
+  padding-block-end: var(--space-8);
+}
+
 .about-section {
   padding: clamp(1.5rem, 4vw, 4rem);
 }
@@ -142,6 +146,12 @@
 .project-info .text-link {
   margin-top: auto;
   padding-top: 1.75rem;
+}
+
+.honor-entry {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.3fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .about-grid {
@@ -244,6 +254,11 @@
 
   .project-visual {
     min-height: 280px;
+  }
+
+  .honor-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
   }
 
   .about-grid {
