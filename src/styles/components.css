@@ -124,6 +124,10 @@
     border-color var(--duration-fast) var(--ease-mechanical);
 }
 
+.arrow-font {
+  font-family: var(--font-mono);
+}
+
 .text-link:hover .link-arrow,
 .honor-entry:hover .link-arrow {
   border-color: var(--accent);
